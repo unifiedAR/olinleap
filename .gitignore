@@ -1,3 +1,4 @@
 *.so
 */target
 external
+target
