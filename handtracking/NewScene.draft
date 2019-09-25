@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<design:rootNode xmlns:design="http://www.magicleap.com/uidesigner/rcp/document/design" name="root" nodeTypeId="lumin.root" modelId="lumin" version="1.11.5">
+  <property id="name" value="root"/>
+  <node name="earth" nodeTypeId="lumin.model">
+    <property id="animationSetupResource"/>
+    <property id="external" value="true"/>
+    <property id="materialAndModel">
+      <property id="model" value="d94b9037-6a7e-45da-bbbd-285ad5ea5afe"/>
+    </property>
+    <property id="name" value="earth"/>
+    <property id="position"/>
+    <property id="rotation"/>
+    <property id="scale">
+      <property id="x" value="0.2"/>
+      <property id="y" value="0.2"/>
+      <property id="z" value="0.2"/>
+    </property>
+    <property id="shader" value="UnlitTextured"/>
+  </node>
+  <node name="cube" nodeTypeId="lumin.model">
+    <property id="animationSetupResource"/>
+    <property id="external" value="true"/>
+    <property id="materialAndModel">
+      <property id="model" value="96ec4bc5-5d83-4d45-9be0-682b35f4362b"/>
+    </property>
+    <property id="name" value="cube"/>
+    <property id="position">
+      <property id="x" value="1.0"/>
+    </property>
+    <property id="rotation"/>
+    <property id="scale">
+      <property id="x" value="0.1"/>
+      <property id="y" value="0.1"/>
+      <property id="z" value="0.1"/>
+    </property>
+    <property id="shader" value="UnlitTextured"/>
+  </node>
+</design:rootNode>

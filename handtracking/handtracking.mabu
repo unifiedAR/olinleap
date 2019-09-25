@@ -1,0 +1,13 @@
+KIND = program
+
+INCS = \
+    code/inc/ \
+    code/inc/gen/
+
+SRCS = \
+    code/src/main.cpp \
+    code/src/handtracking.cpp
+
+USES = \
+    lumin_runtime \
+    code/srcs

@@ -1,0 +1,216 @@
+{
+  "intermediate-storage": {
+    "path": "cache",
+    "kind": "in-tree"
+  },
+  "project-schema-version": 4,
+  "types": {
+    "assets": [
+      "lap/types/asset/audio",
+      "lap/types/asset/blend-setup",
+      "lap/types/asset/material",
+      "lap/types/asset/model",
+      "lap/types/asset/motion-set",
+      "lap/types/asset/outline-font",
+      "lap/types/asset/sprite",
+      "lap/types/asset/texture"
+    ],
+    "files": [
+      "lap/types/file/bmp",
+      "lap/types/file/dds",
+      "lap/types/file/fbx",
+      "lap/types/file/files",
+      "lap/types/file/gltf",
+      "lap/types/file/jpg",
+      "lap/types/file/json",
+      "lap/types/file/lac",
+      "lap/types/file/lbs",
+      "lap/types/file/lms",
+      "lap/types/file/kmat",
+      "lap/types/file/mp3",
+      "lap/types/file/ogg",
+      "lap/types/file/otf",
+      "lap/types/file/pcm",
+      "lap/types/file/png",
+      "lap/types/file/tga",
+      "lap/types/file/tiff",
+      "lap/types/file/wav"
+    ]
+  },
+  "checkpoint-hash": "7c314b6009ffa4a62004438d5ea25b355f86f85d8cd84113695ff0dee31201c536daa332b5761812cc671378b3068be8240d06cf2521dd2f97bcd4e1de9b90e9",
+  "templates": [
+    "lap/template/converted_texture_from_bmp",
+    "lap/template/converted_texture_from_tga",
+    "lap/template/converted_texture_from_tiff",
+    "lap/template/motion_set_from_lms",
+    "lap/template/passthru_audio_from_mp3",
+    "lap/template/passthru_audio_from_ogg",
+    "lap/template/passthru_audio_from_pcm",
+    "lap/template/passthru_audio_from_wav",
+    "lap/template/passthru_blend_setup_from_lbs",
+    "lap/template/passthru_material_from_kmat",
+    "lap/template/passthru_model_from_fbx",
+    "lap/template/passthru_model_from_gltf",
+    "lap/template/passthru_model_from_lac",
+    "lap/template/passthru_outline_font_from_otf",
+    "lap/template/passthru_particle_from_pkfx",
+    "lap/template/passthru_texture_from_dds",
+    "lap/template/passthru_texture_from_jpg",
+    "lap/template/passthru_texture_from_png",
+    "lap/template/spritesheet_from_json"
+  ],
+  "nodes": {
+    "e4b13923-c907-4c0d-a97c-bfef9d569fd0": {
+      "kind": "file",
+      "comment": "cube.fbx",
+      "descriptor": {
+        "path": "SourceArt/cube.fbx",
+        "sha256": "c0b7b924ace8f118951900054f8ab0f67cf8e682d8965e7219d22b7d81adea05"
+      },
+      "name": "cube.fbx",
+      "links": []
+    },
+    "b2008991-8d6d-4a40-8391-bbb971203409": {
+      "kind": "processor",
+      "comment": "Passthru cube.fbx to model.",
+      "expectedRuntime": 0.015620999999999996,
+      "systemWeights": {
+        "cpuCoreCount": 1.0,
+        "cpuPct": 1.0,
+        "gpuPct": 1.0,
+        "ioPct": 1.0
+      },
+      "descriptor": {
+        "path": "lap/project/b2008991-8d6d-4a40-8391-bbb971203409",
+        "sha256": "fe9ae56f04370b797f7bc765d785052743afee3a98afd59a2acf226995b09336"
+      },
+      "links": [
+        {
+          "source": {
+            "aspect": "file",
+            "node": "e4b13923-c907-4c0d-a97c-bfef9d569fd0"
+          },
+          "target": {
+            "aspect": "model"
+          }
+        }
+      ]
+    },
+    "1994235a-1c86-4ab6-a2bd-c1afd6a45c4b": {
+      "kind": "file",
+      "comment": "Intermediate cube.fbx",
+      "descriptor": {
+        "path": "hZYXgJ_mpic/cube.fbx",
+        "sha256": "6870f2dab8bcc55621659879720cd725b3db889c10de4b436817b39c6293d5bb"
+      },
+      "name": "",
+      "links": [
+        {
+          "source": {
+            "aspect": "model",
+            "node": "b2008991-8d6d-4a40-8391-bbb971203409"
+          },
+          "target": {
+            "aspect": "file"
+          }
+        }
+      ]
+    },
+    "96ec4bc5-5d83-4d45-9be0-682b35f4362b": {
+      "name": "cube.fbx",
+      "kind": "asset",
+      "comment": "Intermediate cube.fbx",
+      "asset": "lap/types/asset/model",
+      "links": [
+        {
+          "source": {
+            "aspect": "file",
+            "node": "1994235a-1c86-4ab6-a2bd-c1afd6a45c4b"
+          },
+          "target": {
+            "aspect": "model"
+          }
+        }
+      ],
+      "dirty": false,
+      "exclude": false,
+      "extension": {}
+    },
+    "81b15c42-98cb-474e-a4d4-df0de4876738": {
+      "kind": "file",
+      "comment": "earth.fbx",
+      "descriptor": {
+        "path": "SourceArt/earth.fbx",
+        "sha256": "dd2eb3e3631e0597847498138436f78e6c2d4461e88d72f92b08e78b403bfcf2"
+      },
+      "name": "earth.fbx",
+      "links": []
+    },
+    "84c1f987-0d69-4e64-995d-3f25c826103e": {
+      "kind": "processor",
+      "comment": "Passthru earth.fbx to model.",
+      "expectedRuntime": 0.025479999999999947,
+      "systemWeights": {
+        "cpuCoreCount": 1.0,
+        "cpuPct": 1.0,
+        "gpuPct": 1.0,
+        "ioPct": 1.0
+      },
+      "descriptor": {
+        "path": "lap/project/84c1f987-0d69-4e64-995d-3f25c826103e",
+        "sha256": "8ccf3f16030888e0ce91c9366ce513f489625ec41e7ad2ceef034dd41396776e"
+      },
+      "links": [
+        {
+          "source": {
+            "aspect": "file",
+            "node": "81b15c42-98cb-474e-a4d4-df0de4876738"
+          },
+          "target": {
+            "aspect": "model"
+          }
+        }
+      ]
+    },
+    "5eaaacd8-b089-450e-9b91-1b239f112d28": {
+      "kind": "file",
+      "comment": "Intermediate earth.fbx",
+      "descriptor": {
+        "path": "3OBrqCk_YRU/earth.fbx",
+        "sha256": "96397c8fc808abde7bbbebd7d11a8159c13e01943e8dca005e881dace0322431"
+      },
+      "name": "",
+      "links": [
+        {
+          "source": {
+            "aspect": "model",
+            "node": "84c1f987-0d69-4e64-995d-3f25c826103e"
+          },
+          "target": {
+            "aspect": "file"
+          }
+        }
+      ]
+    },
+    "d94b9037-6a7e-45da-bbbd-285ad5ea5afe": {
+      "name": "earth.fbx",
+      "kind": "asset",
+      "comment": "Intermediate earth.fbx",
+      "asset": "lap/types/asset/model",
+      "links": [
+        {
+          "source": {
+            "aspect": "file",
+            "node": "5eaaacd8-b089-450e-9b91-1b239f112d28"
+          },
+          "target": {
+            "aspect": "model"
+          }
+        }
+      ],
+      "dirty": false,
+      "exclude": false,
+      "extension": {}
+    }
+  }
+}

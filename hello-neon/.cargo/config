@@ -1,0 +1,2 @@
+[target.aarch64-linux-android]
+linker="/Users/jonkelley/Development/Support/MagicLeap/mlsdk/v0.22.0/tools/toolchains/bin/aarch64-linux-android-gcc"

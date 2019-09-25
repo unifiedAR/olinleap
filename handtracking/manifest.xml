@@ -1,0 +1,19 @@
+<manifest
+  xmlns:ml="magicleap"
+  ml:package="com.company.handtracking"
+  ml:version_code="1"
+  ml:version_name="1.0">
+  <application
+    ml:visible_name="handtracking"
+    ml:sdk_version="1.0">
+    <component
+      ml:name=".handtracking.universe"
+      ml:visible_name="handtracking"
+      ml:binary_name="bin/handtracking"
+      ml:type="Universe">
+      <icon
+        ml:model_folder="assets/icon/model"
+        ml:portal_folder="assets/icon/portal" />
+    </component>
+  </application>
+</manifest>

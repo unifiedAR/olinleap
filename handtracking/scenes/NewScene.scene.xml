@@ -1,0 +1,5 @@
+<ObjectModel name="NewScene" version="1">
+    <TransformNode/>
+    <ModelNode castShadow="false" name="earth" receiveShadow="false" res="assets/earth.fbx/3OBrqCk_YRU/earth.fbx" scale="0.2,0.2,0.2"/>
+    <ModelNode castShadow="false" name="cube" receiveShadow="false" res="assets/cube.fbx/hZYXgJ_mpic/cube.fbx" scale="0.01,0.01,0.01"/>
+</ObjectModel>

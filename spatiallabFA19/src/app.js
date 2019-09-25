@@ -1,4 +1,6 @@
-import { LandscapeApp, ui } from 'lumin';
+import { LandscapeApp, ui,  } from 'lumin';
+
+
 const { UiText, EclipseLabelType, Alignment, HorizontalTextAlignment } = ui;
 
 export class App extends LandscapeApp {

@@ -5,6 +5,9 @@
 external
 target
 
+node_modules/
+
+
 # Python
 .DS_Store
 .cproject

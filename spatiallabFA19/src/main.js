@@ -10,3 +10,4 @@ import { App } from './app.js';
 // The 0.5 value is the number of seconds to call `updateLoop` in an interval if
 // there are no other events waking the event loop.
 export default new App(0.5);
+
