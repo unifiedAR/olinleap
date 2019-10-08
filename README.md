@@ -19,6 +19,6 @@ A template for a rust npm module using neon bindings
 ---
 MagicScript's tictactoe template to demonstrate basics of MagicScript
 
-### kitchen-sink
+### spatiallabFA19
 ---
 Primary research project which includes all the tools and advancements made during the FA19
