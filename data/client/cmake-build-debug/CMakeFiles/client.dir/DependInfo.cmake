@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/dmazza/olinleap/data/client/main.cpp" "C:/Users/dmazza/olinleap/data/client/cmake-build-debug/CMakeFiles/client.dir/main.cpp.obj"
+  "/home/duncan/olinleap/data/classes/pointCloudPack.cpp" "/home/duncan/olinleap/data/client/cmake-build-debug/CMakeFiles/client.dir/home/duncan/olinleap/data/classes/pointCloudPack.cpp.o"
+  "/home/duncan/olinleap/data/client/main.cpp" "/home/duncan/olinleap/data/client/cmake-build-debug/CMakeFiles/client.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

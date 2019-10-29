@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/client.dir/main.cpp.obj"
-  "client.exe"
-  "client.exe.manifest"
-  "client.lib"
+  "CMakeFiles/client.dir/main.cpp.o"
+  "CMakeFiles/client.dir/home/duncan/olinleap/data/classes/pointCloudPack.cpp.o"
   "client.pdb"
+  "client"
 )
 
 # Per-language clean rules from dependency scanning.

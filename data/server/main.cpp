@@ -1,40 +1,39 @@
 //
-//  Hello World server in C++
-//  Binds REP socket to tcp://*:5555
-//  Expects "Hello" from client, replies with "World"
+// Lazy Pirate server
+// Binds REQ socket to tcp://*:5555
+// Like hwserver except:
+// - echoes request as-is
+// - randomly runs slowly, or exits to simulate a crash.
 //
-#include "../cppzmq/zmq.hpp"
-#include <string>
-#include <iostream>
-#ifndef _WIN32
-#include <unistd.h>
-#else
-#include <Windows.h>
-#define sleep(n)    Sleep(n)
-#endif
+#include "../classes/zhelpers.hpp"
 
+int main() {
+    std::string connect_sequence = "126"; // '~'
+    zmq::context_t context(1);
 
+    srandom((unsigned) time(NULL));
 
-int main () {
-    //  Prepare our context and socket
-    zmq::context_t context (1);
-    zmq::socket_t socket (context, ZMQ_REP);
-    socket.bind ("tcp://*:5555");
+    int counter = 0;
 
-    while (true) {
-        zmq::message_t request;
+    // --------- Log point cloud data -------- //
+    while (1) {
+        auto *server = new zmq::socket_t(context, ZMQ_REP);
+        server->bind("tcp://*:5555");
 
-        //  Wait for next request from client
-        socket.recv (&request);
-        std::cout << "Received Hello" << std::endl;
+        while (1) {
+            std::string points = s_recv(*server);
+            if (points == connect_sequence) {
+                std::cout << "Establish a connection with the client" << std::endl;
+                s_send(*server, points);
+                continue;
+            }
 
-        //  Do some 'work'
-        sleep(1);
+            std::cout << "Points: (time #" << counter << ")" << std::endl << points << std::endl;
 
-        //  Send reply back to client
-        zmq::message_t reply (5);
-        memcpy (reply.data (), "World", 5);
-        socket.send (reply);
+            sleep(1);
+            s_send(*server, "");  // send confirmation as an empty message
+            counter++;
+        }
     }
     return 0;
 }
