@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/duncan/olinleap/data/classes/pointCloudPack.cpp
+pointCloudPack.h
+/home/duncan/olinleap/data/classes/pointCloudPack.h
+iostream
+-
+
 /home/duncan/olinleap/data/classes/pointCloudPack.h
 iostream
 -
